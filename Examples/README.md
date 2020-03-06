@@ -1,0 +1,1 @@
+Readme of example folder
