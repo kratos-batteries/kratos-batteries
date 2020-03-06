@@ -35,7 +35,7 @@ def get_bat_dat_final(mapi_key):
     MPRester.get_battery_data = get_battery_data
 
     # import the crytsal system table from repository
-    crystal = pd.read_csv('crystal_system_table.csv')
+    crystal = pd.read_csv('CrystalSystemTable.csv')
 
     # making a list of all the battery IDs
     all_bat_ids_list = (mpr._make_request('/battery/all_ids'))
