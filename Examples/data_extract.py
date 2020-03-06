@@ -9,7 +9,7 @@ import pandas as pd
 from pymatgen import MPRester
 
 
-def get_bat_dat_final(mapi_key):
+def get_bat_dat(mapi_key):
     """
     Takes materials project API key as input and returns dataframe of
     all battery material properies
