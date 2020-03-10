@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Jupyter Notebook Checkpoints
+.DS_Store
+.ipynb_checkpoints/
