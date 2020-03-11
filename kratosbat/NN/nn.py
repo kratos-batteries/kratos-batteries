@@ -1,43 +1,25 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torch.optim as optim
 import numpy as np
 import pandas as pd
 
 #categorizing the input and output data
-bat_data = pd.read_csv('TrainingData.csv')
+bat_data = pd.read_csv('NEWTrainingData_StandardScaler.csv')
 train_bat = bat_data
 
-train_bat = train_bat.replace('Li', 1)
-train_bat = train_bat.replace('Ca', 2)
-train_bat = train_bat.replace('Cs', 3)
-train_bat = train_bat.replace('Rb', 4)
-train_bat = train_bat.replace('K', 5)
-train_bat = train_bat.replace('Y', 6)
-train_bat = train_bat.replace('Na', 7)
-train_bat = train_bat.replace('Al', 8)
-train_bat = train_bat.replace('Zn', 9)
-train_bat = train_bat.replace('Mg', 0)
-
-train_bat = train_bat.replace('Orthorombic', 1)
-train_bat = train_bat.replace('Monoclinic', 2)
-train_bat = train_bat.replace('Trigonal', 3)
-train_bat = train_bat.replace('Triclinic', 4)
-train_bat = train_bat.replace('Tetragonal', 5)
-train_bat = train_bat.replace('Hexagonal', 6)
-train_bat = train_bat.replace('Cubic', 7)
-
-D_in, H, H2, D_out, N = 91, 1000, 75, 3, 4000
+D_in, H, H2, D_out, N = 165, 100, 75, 2, 4000
 dtype = torch.float
 device = torch.device('cpu')
 
 
 #define testing sets
-x_train = train_bat
-x_train = x_train.drop(columns=['Battery ID', 'Gravimetric Capacity (units)', 'Volumetric Capacity', 'Max Delta Volume'])
+x_train = train_bat.drop(columns=['Unnamed: 0', 'Gravimetric Capacity (units)', 'Volumetric Capacity', 'Max Delta Volume'])
+y_train = train_bat[['Gravimetric Capacity (units)', 'Volumetric Capacity']]
 
-y_train = train_bat[['Gravimetric Capacity (units)', 'Volumetric Capacity', 'Max Delta Volume']]
-
+#test-train split
+#optimize for user data
 x_test = x_train[4000:]
 y_test = y_train[4000:]
 
@@ -57,8 +39,10 @@ x_test_torch = torch.tensor(x_test_np, device = device, dtype = dtype)
 y_test_np = np.array(y_test)
 y_test_torch = torch.tensor(y_test_np, device = device, dtype = dtype)
 
+#Defining weights
 w1 = torch.randn(D_in, H, device=device, dtype=dtype)
 w2 = torch.randn(H, D_out, device=device, dtype=dtype)
+#w3 = torch.randn(H2, D_out, device=device, dtype=dtype)
 
 #define model
 model = torch.nn.Sequential(
@@ -67,9 +51,13 @@ model = torch.nn.Sequential(
     torch.nn.Linear(H, H2),
     torch.nn.LeakyReLU(),
     torch.nn.Linear(H2, D_out),
+    #nn.Softmax(dim=1) #normalizing the data,
 )
 
-learning_rate = 1e-10
+optimizer = optim.SGD(model.parameters(), lr=1e-5)
+loss_fn = torch.nn.MSELoss(reduction='sum')
+
+learning_rate = 1e-5
 for t in range(10000):
     # Forward pass: compute predicted y by passing x to the model. Module objects
     # override the __call__ operator so you can call them like functions. When
@@ -84,7 +72,8 @@ for t in range(10000):
     if t % 1000 == 999:
         print(t, loss.item())
 
-    # Zero the gradients before running the backward pass.
+    # Zero the gradients before running the backward/training pass.
+    optimizer.zero_grad()
     model.zero_grad()
 
     # Backward pass: compute gradient of the loss with respect to all the learnable
@@ -92,6 +81,7 @@ for t in range(10000):
     # in Tensors with requires_grad=True, so this call will compute gradients for
     # all learnable parameters in the model.
     loss.backward()
+    optimizer.step()
 
     # Update the weights using gradient descent. Each parameter is a Tensor, so
     # we can access its gradients like we did before.
