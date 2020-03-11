@@ -131,3 +131,6 @@ dmypy.json
 # Jupyter Notebook Checkpoints
 .DS_Store
 .ipynb_checkpoints/
+
+# VScode setting
+.vscode/
