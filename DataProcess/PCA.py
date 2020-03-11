@@ -7,8 +7,6 @@ df=pd.read_csv('TrainingData.csv')
 #Change strings to numbers
 from sklearn import preprocessing
 
-# use LabelBinarizer package in sklearn which can A simple way to extend these algorithms
-#  to the multi-class classification case is to use the so-called one-vs-all scheme.
 lb = preprocessing.LabelBinarizer()
 wi=lb.fit_transform(np.array(df.loc[:,['Working Ion']]))
 cs=lb.fit_transform(np.array(df.loc[:,['Crystal System']]))
@@ -42,7 +40,7 @@ el=np.array(df.loc[:,['mean_Number', 'mean_MendeleevNumber',
                        'dev_GSbandgap.1', 'dev_GSmagmom.1', 'dev_SpaceGroupNumber.1']])
 prop=np.hstack((wi, cs, sn, el))
 
-#Use StandardScaler, normalize data with minus its mean and divide its variance
+#Use StandardScaler
 from sklearn.preprocessing import StandardScaler
 
 ss = StandardScaler()
@@ -52,9 +50,13 @@ pca = PCA(n_components=165)
 newdata=pca.fit_transform(pss)
 
 newdf = pd.DataFrame(newdata)
+outputs = np.array(df.loc[:,['Gravimetric Capacity (units)', 'Volumetric Capacity', 'Max Delta Volume']])
+newdf['Gravimetric Capacity (units)'] = ss.fit_transform(outputs)[:,[0]]
+newdf['Volumetric Capacity'] = ss.fit_transform(outputs)[:,[1]]
+newdf['Max Delta Volume'] = ss.fit_transform(outputs)[:,[2]]
 newdf.to_csv('NEWTrainingData_StandardScaler.csv')
 
-#Use MinMaxScaler, put all the magnitude of value in range -1~1
+#Use MinMaxScaler
 from sklearn.preprocessing import MinMaxScaler
 
 ms = MinMaxScaler()
@@ -64,4 +66,8 @@ pca2 = PCA(n_components=115)
 newdata2=pca2.fit_transform(pms)
 
 newdf2 = pd.DataFrame(newdata2)
+outputs = np.array(df.loc[:,['Gravimetric Capacity (units)', 'Volumetric Capacity', 'Max Delta Volume']])
+newdf2['Gravimetric Capacity (units)'] = ms.fit_transform(outputs)[:,[0]]
+newdf2['Volumetric Capacity'] = ms.fit_transform(outputs)[:,[1]]
+newdf2['Max Delta Volume'] = ms.fit_transform(outputs)[:,[2]]
 newdf2.to_csv('NEWTrainingData_MinMaxScaler.csv')
