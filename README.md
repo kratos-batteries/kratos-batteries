@@ -27,3 +27,5 @@ docs/
 [![HitCount](http://hits.dwyl.com/kratos-batteries/kratos-batteries.svg)](http://hits.dwyl.com/kratos-batteries/kratos-batteries)
 
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+
+[![Inline docs](http://inch-ci.org/github/kratos-batteries/kratos-batteries.svg?branch=master)](http://inch-ci.org/github/kratos-batteries/kratos-batteries)
