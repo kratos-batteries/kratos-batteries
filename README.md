@@ -23,3 +23,5 @@ docs/
 ```
 
 ## Other components of README
+## Badges
+[![HitCount](http://hits.dwyl.com/kratos-batteries/kratos-batteries.svg)](http://hits.dwyl.com/kratos-batteries/kratos-batteries)
