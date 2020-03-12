@@ -30,4 +30,4 @@ docs/
 
 [![Inline docs](http://inch-ci.org/github/kratos-batteries/kratos-batteries.svg)](http://inch-ci.org/github/kratos-batteries/kratos-batteries)
 
-
+[![Build Status](https://travis-ci.org/kratos-batteries/kratos-batteries.png)](https://travis-ci.org/kratos-batteries/kratos-batteries)
