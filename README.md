@@ -1,4 +1,3 @@
-https://travis-ci.org/{{agonsalves2}}/{{kratosbat}}.png?branch={{master}}
 # Krátos Batteries <img align="right" src="images/logo.png" width="150">
 ## Package for Predicting Battery Parameters of New Electrode Materials
 This package can be used to predict the change in volume as well as the volumetric and gravimetric capacities of new electrode materials. To do so, this package extracts the entirety of the materials project (https://materialsproject.org/) database of electrode materials and with some data manipulation is able to create a Neural Network (NN). This NN is trained to help predict the aforementioned properties of new battery materials.
