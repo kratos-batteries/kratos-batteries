@@ -28,4 +28,6 @@ docs/
 
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
-[![Inline docs](http://inch-ci.org/github/kratos-batteries/kratos-batteries.svg?branch=master)](http://inch-ci.org/github/kratos-batteries/kratos-batteries)
+[![Inline docs](http://inch-ci.org/github/kratos-batteries/kratos-batteries.svg)](http://inch-ci.org/github/kratos-batteries/kratos-batteries)
+
+
