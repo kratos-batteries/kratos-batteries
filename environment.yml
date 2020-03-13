@@ -1,0 +1,3 @@
+name: codebase
+dependencies:
+  - pandas
