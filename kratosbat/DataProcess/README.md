@@ -1,4 +1,4 @@
-# Unit tests for Data Process Functions
+# Unit Tests for Data Process Functions
 
 ### variable_selection_extraction.py unit test results
 Result of running nosetests on test_chachifuncs.py: 
