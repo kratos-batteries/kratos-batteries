@@ -1,0 +1,11 @@
+# Unit tests for Data Process Functions
+
+### variable_selection_extraction.py unit test results
+Result of running nosetests on test_chachifuncs.py: 
+```
+............
+---------------------------------------------------------------------
+Ran 2 tests in 2445.101s
+
+OK
+```
