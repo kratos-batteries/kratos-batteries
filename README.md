@@ -25,6 +25,8 @@ kratosbat/
     preprocessing
 docs/
 ```
+## Usage
+
 
 ## Other components of README
 
