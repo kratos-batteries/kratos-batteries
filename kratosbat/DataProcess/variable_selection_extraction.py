@@ -49,12 +49,12 @@ def get_data_RFE():
 
      outputs=pd.read_csv('NEWTrainingData_StandardScaler.csv').loc[:,['Gravimetric Capacity (units)', 'Volumetric Capacity', 'Max Delta Volume']]
 
-     X_train,X_test, y_train, y_test =train_test_split(standard_data,outputs,test_size=0.2, random_state=0)
-     return X_train,X_test, y_train, y_test
+     X_train,y_train = standard_data,outputs  
+     return X_train, y_train
 
 
 
-def SVR_linear_RFE(X_train,X_test, y_train, y_test):
+def SVR_linear_RFE(X_train, y_train):
    
     #http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html#sklearn.feature_selection.RFE
     # a coef_ attribute or a feature_importances_ attribute
@@ -80,19 +80,19 @@ def SVR_linear_RFE(X_train,X_test, y_train, y_test):
 def PCA_get_CSV(GC_df, VC_df, MDV_df):
     
     # get a .csv file for Gravimetric Capacity (units) after PCA
-    pca = PCA(n_components=133)
+    pca = PCA(n_components=135)
     newdata1=pca.fit_transform(GC_df)
     newdf1 = pd.DataFrame(newdata1)
     newdf1.to_csv('./Data/Data for svr/GC_CPA.csv')
 
     # get a .csv file for Volumetric Capacity after PCA
-    pca = PCA(n_components=134)
+    pca = PCA(n_components=135)
     newdata2=pca.fit_transform(VC_df)
     newdf2 = pd.DataFrame(newdata2)
     newdf2.to_csv('./Data/Data for svr/VC_CPA.csv')
 
     # get a .csv file for Max Delta Volume after PCA
-    pca = PCA(n_components=134)
+    pca = PCA(n_components=131)
     newdata3=pca.fit_transform(MDV_df) 
     newdf3 = pd.DataFrame(newdata3)
     newdf3.to_csv('./Data/Data for svr/MDV_CPA.csv')
