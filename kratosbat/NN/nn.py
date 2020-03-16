@@ -56,7 +56,7 @@ def nn_capacity(dataframe, d_in, H, h_2, d_out, N):
         torch.nn.LeakyReLU(),
         torch.nn.Linear(H, h_2),
         torch.nn.LeakyReLU(),
-        torch.nn.Linear(h2, d_out),
+        torch.nn.Linear(h_2, d_out),
         # nn.Softmax(dim=1) #normalizing the data,
     )
 
@@ -153,7 +153,7 @@ def nn_volume(dataframe, d_in, H, h_2, d_out, N):
         torch.nn.LeakyReLU(),
         torch.nn.Linear(H, h_2),
         torch.nn.LeakyReLU(),
-        torch.nn.Linear(h2, d_out),
+        torch.nn.Linear(h_2, d_out),
         # nn.Softmax(dim=1) #normalizing the data,
     )
 
