@@ -8,6 +8,9 @@ data and exports a csv where each row is a different battery material.
 import os
 import pandas as pd
 from pymatgen import MPRester
+import sys
+sys.path.append("../ThirdPartyResource/")
+import magpie
 from magpie import MagpieServer
 
 
