@@ -1,3 +1,5 @@
 name: codebase
 dependencies:
   - pandas
+  - pytorch
+  - sklearn
