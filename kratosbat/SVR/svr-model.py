@@ -1,5 +1,5 @@
 from sklearn.svm import SVR
-from sklearn.externals import joblib
+import joblib
 from sklearn.model_selection import GridSearchCV
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,55 +15,30 @@ def svr_data():
     return X1,y1,X2,y2,X3,y3
 
 def GC_svr_model(X1,y1):
-     # 自动选择合适的参数
-    svr = GridSearchCV(SVR(), param_grid={"kernel": ("linear", 'rbf','sigmoid','poly'), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
+     # Choose parameters automatically
+    svr = GridSearchCV(SVR(), param_grid={"kernel": ('sigmoid',), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
     svr.fit(X1, y1)
-    joblib.dump(svr, 'svr_CG.pkl')        # 保存模型
-    xneed = np.linspace(0, 100, 100)[:, None]
-    y_pre = svr.predict(xneed)# 对结果进行可视化：
-    plt.scatter(X1, y1, c='k', label='data', zorder=1)
-    # plt.hold(True)
-    plt.plot(xneed, y_pre, c='r', label='SVR_fit')
-    plt.xlabel('data')
-    plt.ylabel('target')
-    plt.title('SVR versus Kernel Ridge')
-    plt.legend()
-    plt.show()
+    joblib.dump(svr, 'svr_CG.pkl')        # Save model
     print(svr.best_params_)
     return
 
 def VC_svr_model(X2,y2):
-     # 自动选择合适的参数
-    svr = GridSearchCV(SVR(), param_grid={"kernel": ("linear", 'rbf','sigmoid','poly'), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
+     # Choose parameters automatically
+    svr = GridSearchCV(SVR(), param_grid={"kernel": ('sigmoid',), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
     svr.fit(X2, y2)
-    joblib.dump(svr, 'svr_CV.pkl')        # 保存模型
-    xneed = np.linspace(0, 100, 100)[:, None]
-    y_pre = svr.predict(xneed)# 对结果进行可视化：
-    plt.scatter(X2, y2, c='k', label='data', zorder=1)
-    # plt.hold(True)
-    plt.plot(xneed, y_pre, c='r', label='SVR_fit')
-    plt.xlabel('data')
-    plt.ylabel('target')
-    plt.title('SVR versus Kernel Ridge')
-    plt.legend()
-    plt.show()
+    joblib.dump(svr, 'svr_CV.pkl')        # Save model
     print(svr.best_params_)
     return
 
 def MDV_svr_model(X3,y3):
-     # 自动选择合适的参数
-    svr = GridSearchCV(SVR(), param_grid={"kernel": ("linear", 'rbf','sigmoid','poly'), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
+     # Choose parameters automatically
+    svr = GridSearchCV(SVR(), param_grid={"kernel": ('sigmoid',), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
     svr.fit(X3, y3)
-    joblib.dump(svr, 'svr_MDV.pkl')        # 保存模型
-    xneed = np.linspace(0, 100, 100)[:, None]
-    y_pre = svr.predict(xneed)# 对结果进行可视化：
-    plt.scatter(X3, y3, c='k', label='data', zorder=1)
-    # plt.hold(True)
-    plt.plot(xneed, y_pre, c='r', label='SVR_fit')
-    plt.xlabel('data')
-    plt.ylabel('target')
-    plt.title('SVR versus Kernel Ridge')
-    plt.legend()
-    plt.show()
+    joblib.dump(svr, 'svr_MDV.pkl')        # Save model
     print(svr.best_params_)
     return
+
+X1,y1,X2,y2,X3,y3 = svr_data()
+GC_svr_model(X1,y1)
+VC_svr_model(X2,y2)
+MDV_svr_model(X3,y3)
