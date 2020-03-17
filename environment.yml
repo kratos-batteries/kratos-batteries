@@ -2,4 +2,4 @@ name: codebase
 dependencies:
   - pandas
   - pytorch
-  - sklearn
+  - scikit-learn
