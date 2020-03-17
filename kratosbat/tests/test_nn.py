@@ -2,7 +2,7 @@ import torch
 import torch.optim as optim
 import numpy as np
 import pandas as pd
-import nn
+import nn.py as nn
 
 
 def test_nn_capacity():
