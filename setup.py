@@ -1,8 +1,7 @@
 import sys
 import os
 from setuptools import setup, find_packages  
-
-   
+ 
 setup(  name = "kratosbat",  
         version = "1.0",  
         keywords = ("capacity", "volume change","prediction"),  
@@ -17,7 +16,7 @@ setup(  name = "kratosbat",
         maintainer_email = "baioumyy@uw.edu",
 
 
-             classifiers=[  # Optional
+        classifiers=[  # Optional
         # How mature is this project? Common values are
         #   3 - Alpha
         #   4 - Beta
@@ -40,28 +39,18 @@ setup(  name = "kratosbat",
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         ],
-
-   
         packages = find_packages('kratosbat',exclude=['tests']),  
         include_package_data = True,  
-        platforms = "any",  
-        
+        platforms = "any",         
         install_requires = ['pandas',
                              'sklearn',
                              'numpy',
                              'matplotlib',
                              'pytorch'
                             ],
-
-        extras_require={  # Optional
-                         'dev': ['check-manifest'],
-                         'test': ['coverage'],
-                        },
-         
         entry_points = {  
              'console_scripts': [  
-                  'test = test.help:main'  
-                  'kratos_run = kratosbat.RedisRun.redis_run:main',
+                  'kratos_run = kratosbat.kratos_run:main',
         ]  
      }  
  )
