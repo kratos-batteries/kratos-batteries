@@ -35,7 +35,7 @@ def GC_svr_model(X1,y1):
 def VC_svr_model(X2,y2):
     svr = GridSearchCV(SVR(), param_grid={"kernel": ("linear", 'rbf','sigmoid','poly'), "C": np.logspace(-3, 3, 7), "gamma": np.logspace(-3, 3, 7)})
     svr.fit(X2, y2)
-    joblib.dump(svr, 'svr_CV.pkl')       
+    joblib.dump(svr, 'svr_CV.pkl')      
     print(svr.best_params_)
     return
 
