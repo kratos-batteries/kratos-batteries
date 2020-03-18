@@ -1,8 +1,8 @@
 def get_elementProperty(clean_battery_df=None):
-    
+
         # here we import a API called The Materials Agnostic Platform for Informatics and Exploration (Magpie)
-        # this API can let us use formula of a conpound to get its  elemental properties from statistics of 
-        # atomic constituents attributes. 
+        # this API can let us use formula of a conpound to get its  elemental properties from statistics of
+        # atomic constituents attributes.
 
         #  Details are in this paper:
         #  Ward, L.; Agrawal, A.; Choudhary, A.; Wolverton, C. A General-Purpose Machine Learning Framework for Predicting Properties of 
@@ -12,8 +12,8 @@ def get_elementProperty(clean_battery_df=None):
         import pandas as pd
         m = MagpieServer()
         if clean_battery_df == None:
-            if os.path.exists('./Data/BatteryData.csv'):
-                clean_battery_df=pd.read_csv('./Data/BatteryData.csv')
+            if os.path.exists('../Data/BatteryData.csv'):
+                clean_battery_df=pd.read_csv('../Data/BatteryData.csv')
         # here we can get Mean and Deviation of Element Property for Charge_Formula
         charge_formula=clean_battery_df['Charge Formula']
         df_Mean_Charge=m.generate_attributes("oqmd-Eg",charge_formula).iloc[:,6:-7:6]
@@ -26,8 +26,8 @@ def get_elementProperty(clean_battery_df=None):
         'dev_CovalentRadius':'Char_dev_CovalentRadius','dev_Electronegativity':'Char_dev_Electronegativity','dev_NsValence':'Char_dev_NsValence','dev_NpValence':'Char_dev_NpValence','dev_NdValence':'Char_dev_NdValence','dev_NfValence':'Char_dev_NfValence',
         'dev_NValance':'Char_dev_NValance','dev_NsUnfilled':'Char_dev_NsUnfilled','dev_NpUnfilled':'Char_dev_NpUnfilled','dev_NdUnfilled':'Char_dev_NdUnfilled','dev_NfUnfilled':'Char_dev_NfUnfilled','dev_NUnfilled':'Char_dev_NUnfilled','dev_GSvolume_pa':'Char_dev_GSvolume_pa',
         'dev_GSbandgap':'Char_dev_GSbandgap','dev_GSmagmom':'Char_dev_GSmagmom','dev_SpaceGroupNumber':'Char_dev_SpaceGroupNumber'})
-        
-        
+
+
         # here we can get Mean and Deviation of Element Property for Discharge_Formula
         discharge_formula=clean_battery_df['Discharge Formula']
         df_Mean_Discharge=m.generate_attributes("oqmd-Eg",discharge_formula).iloc[:,6:-7:6]
@@ -40,9 +40,9 @@ def get_elementProperty(clean_battery_df=None):
         'dev_CovalentRadius':'Dis_dev_CovalentRadius','dev_Electronegativity':'Dis_dev_Electronegativity','dev_NsValence':'Dis_dev_NsValence','dev_NpValence':'Dis_dev_NpValence','dev_NdValence':'Dis_dev_NdValence','dev_NfValence':'Dis_dev_NfValence',
         'dev_NValance':'Dis_dev_NValance','dev_NsUnfilled':'Dis_dev_NsUnfilled','dev_NpUnfilled':'Dis_dev_NpUnfilled','dev_NdUnfilled':'Dis_dev_NdUnfilled','dev_NfUnfilled':'Dis_dev_NfUnfilled','dev_NUnfilled':'Dis_dev_NUnfilled','dev_GSvolume_pa':'Dis_dev_GSvolume_pa',
         'dev_GSbandgap':'Dis_dev_GSbandgap','dev_GSmagmom':'Dis_dev_GSmagmom','dev_SpaceGroupNumber':'Dis_dev_SpaceGroupNumber'})
-        
+
         # use concat to merge all data in one DataFrame
         element_attributes=pd.concat(objs=[df_Mean_Charge,df_Dev_Charge,df_Mean_Discharge,df_Dev_Discharge],axis=1)
-        element_attributes.to_csv(path_or_buf='./Data/ElementalProperty.csv')
+        element_attributes.to_csv(path_or_buf='../Data/ElementalProperty.csv')
         return element_attributes
 
