@@ -173,7 +173,7 @@ spacegroup number, charge formula, and discharge formula</p>
 
 <dl class="function">
 <dt id="predict_tools.nn_capacity">
-<code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">nn_capacity</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">size_h</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">number_samples</em><span class="sig-paren">)</span><a class="headerlink" href="#predict_tools.nn_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">nn_capacity</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#predict_tools.nn_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes a dataframe, the number of inputs, the number of nodes
 for the first hidden layer, the number of nodes for the second
 hidden layer, the number of outputs, and the total number of
@@ -184,7 +184,10 @@ neural network to return gravimetric and volumetric capacity</p>
 <dl class="function">
 <dt id="predict_tools.nn_volume">
 <code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">nn_volume</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#predict_tools.nn_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes dataframe and returns the volume change of the    electrode. Parameters are the dataframe,    the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints.</p>
+<dd><p>Takes dataframe and returns the volume change of the electrode. Parameters
+are the dataframe, the number of inputs, the number of nodes for the
+first hidden layer, the number of nodes for the second hidden layer, the
+number of outputs, and the total number of datapoints.</p>
 </dd></dl>
 
 </div>
