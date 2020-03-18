@@ -10,3 +10,13 @@ Ran 2 tests in 2033.057s
 
 OK
 ```
+
+### Test nn.py
+Result of running nosetests on test_nn.py:
+```
+............
+----------------------------------------------------------------------
+Ran 2 tests in 1.184s
+
+OK
+```
