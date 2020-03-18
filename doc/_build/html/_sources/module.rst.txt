@@ -1,7 +1,7 @@
-predict_tool
+predictor
 =============
 
-.. toctree::
+.. toctree:: predictor
    :maxdepth: 4
 
-   kratosbat
+
