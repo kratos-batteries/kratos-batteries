@@ -20,3 +20,13 @@ Ran 2 tests in 1.184s
 
 OK
 ```
+
+### Test svr_model.py
+Result of running nosetests on test_svr_model.py:
+```
+............
+----------------------------------------------------------------------
+Ran 3 tests in 12.203s
+
+OK
+```
