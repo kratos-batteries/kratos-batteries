@@ -9,7 +9,7 @@ This package can be used to predict the change in volume as well as the volumetr
 
 ### Installation
 ```
-
+conda install kratosbat (not conda installable yet)
 ```
 ### Software Dependencies
 - Python 3 (>=3.5)
