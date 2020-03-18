@@ -7,10 +7,10 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
 '''
-this file is to use 10 fold cross-validation to select best kernal function 
+this file is to use 10 fold cross-validation to select best kernal function
 that give best performence in SVR model.
 
-after establishing our SVR model, we will use cross-validation to evaluate our 
+after establishing our SVR model, we will use cross-validation to evaluate our
 model by get average MSE, RSS, R^2
 
 '''
@@ -28,7 +28,7 @@ def svr_data():
     return X1, y1, X2, y2, X3, y3
 
 
-# following three functions are in same figure: use 10 fold cross-validation select best 
+# following three functions are in same figure: use 10 fold cross-validation select best
 # kernal in a list(ploy, rbf, sigmoid),and show the outcome as MSE for each kernal model
 def GC_kernal_select(X1, y1):
     kf = KFold(n_splits=10, shuffle=True)
@@ -92,10 +92,10 @@ def SVR_model_validation(X1, y1, X2, y2, X3, y3):
     svr_cg = joblib.load('svr_GC.pkl')
     svr_cv = joblib.load('svr_CV.pkl')
     svr_mdv = joblib.load('svr_MDV.pkl')
-     
+
     # evaluate model of GC
     kf1 = KFold(n_splits=10, shuffle=True)
-    kf1.get_n_splits(X1, y1)   
+    kf1.get_n_splits(X1, y1)
     list_mse1 = []
     list_R21 = []
     for train_index, test_index in kf1.split(X1, y1):
@@ -109,7 +109,7 @@ def SVR_model_validation(X1, y1, X2, y2, X3, y3):
 
     # evaluate model of VC
     kf = KFold(n_splits=10, shuffle=True)
-    kf.get_n_splits(X2, y2)   
+    kf.get_n_splits(X2, y2)
     list_mse2 = []
     list_R22 = []
     for train_index, test_index in kf.split(X2, y2):
@@ -123,7 +123,7 @@ def SVR_model_validation(X1, y1, X2, y2, X3, y3):
 
     # evaluate model of MDV
     kf3 = KFold(n_splits=10, shuffle=True)
-    kf3.get_n_splits(X3, y3)   
+    kf3.get_n_splits(X3, y3)
     list_mse3 = []
     list_R23 = []
     for train_index, test_index in kf3.split(X2, y2):
