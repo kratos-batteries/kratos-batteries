@@ -11,8 +11,9 @@ This package can be used to predict the change in volume as well as the volumetr
 install code here (need a package name)
 ```
 ### Software Dependencies
-- Python 3
+- Python 3 (>=3.6)
   - See environment.yml for environment
+Notebooks are provided in the `Examples` directory. You will require a `jupyter notebook`. 
 ## Organization of Repository
 ```
 doc/
@@ -82,6 +83,8 @@ README.md
 environment.yml
 setup.py
 ```
+## Neural Network - PyTorch
+
 ## Usage
 
 
