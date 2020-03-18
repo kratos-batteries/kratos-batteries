@@ -140,9 +140,10 @@ Using Pytorch, a neural network  was created to predict gravimetric capacity, vo
 
 This loss function and schematic of this NN is shown above for user validation.
 
-## Support Vector Regression (SVR)
+## Support Vector Machine - Regression (SVR)
+SVR was used as a supervised learning model to analyze the data for regression analysis. 
 
-<img align="center" src="images/SVR_CV.png" width="300"> <img align="center" src="images/SVR_GC.png" width="300"> <img align="center" src="images/SVR_MDV.png" width="300">
+<img align="center" src="images/SVR_CV.png" width="200"> <img align="center" src="images/SVR_GC.png" width="200"> <img align="center" src="images/SVR_MDV.png" width="200">
 
 ## Usage
 
