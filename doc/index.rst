@@ -6,7 +6,6 @@ Welcome to kratos-batteries's documentation!
    :caption: Contents:
 
    module
-   kratosbat
 
 Indices and tables
 ==================
