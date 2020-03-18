@@ -1,5 +1,6 @@
 # Krátos Batteries <img align="right" src="images/logo.png" width="150">
 [![Build Status](https://travis-ci.org/kratos-batteries/kratos-batteries.svg?branch=master)](https://travis-ci.org/kratos-batteries/kratos-batteries)
+[![Documentation Status](https://readthedocs.org/projects/kratos-batteries/badge/?version=latest)](https://kratos-batteries.readthedocs.io/en/latest/?badge=latest)
 [![Coverage Status](https://coveralls.io/repos/github/kratos-batteries/kratos-batteries/badge.svg?branch=master)](https://coveralls.io/github/kratos-batteries/kratos-batteries?branch=master)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![HitCount](http://hits.dwyl.com/kratos-batteries/kratos-batteries.svg)](http://hits.dwyl.com/kratos-batteries/kratos-batteries)
