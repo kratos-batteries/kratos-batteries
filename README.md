@@ -1,11 +1,8 @@
 # Krátos Batteries <img align="right" src="images/logo.png" width="150">
 [![Build Status](https://travis-ci.org/kratos-batteries/kratos-batteries.svg?branch=master)](https://travis-ci.org/kratos-batteries/kratos-batteries)
 [![Coverage Status](https://coveralls.io/repos/github/kratos-batteries/kratos-batteries/badge.svg?branch=master)](https://coveralls.io/github/kratos-batteries/kratos-batteries?branch=master)
-![Conda Status](https://anaconda.org/politim/kratosbat/badges/installer/conda.svg)
-![Downloads](https://anaconda.org/politim/kratosbat/badges/downloads.svg)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![HitCount](http://hits.dwyl.com/kratos-batteries/kratos-batteries.svg)](http://hits.dwyl.com/kratos-batteries/kratos-batteries)
-[![Anaconda-Server Badge](https://anaconda.org/politim/kratosbat/badges/platforms.svg)](https://anaconda.org/politim/kratosbat)
 ## Package for Predicting Battery Parameters of New Electrode Materials
 This package can be used to predict the change in volume as well as the volumetric and gravimetric capacities of new electrode materials. To do so, this package extracts the entirety of the materials project (https://materialsproject.org/) database of electrode materials and with some data manipulation is able to create a Neural Network (NN). This NN is trained to help predict the aforementioned properties of new battery materials.
 
