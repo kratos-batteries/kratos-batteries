@@ -103,5 +103,5 @@ def generate_model_df(Ion, CrystalSystem, Spacegroup, Charge, Discharge):
     NEW_DF2 = pd.DataFrame(NEW_DATA2)
     df = np.array(NEW_DF2)
     df = np.transpose(df)
-    
-    return NEW_DF2
+
+    return df
