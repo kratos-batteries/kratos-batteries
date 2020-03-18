@@ -19,12 +19,12 @@ model by get average MSE, RSS, R^2
 
 
 def svr_data():
-    X1 = pd.read_csv('../Data/DataForSVR/GC_PCA.csv')
-    y1 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)']]
-    X2 = pd.read_csv('../Data/DataForSVR/VC_PCA.csv')
-    y2 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Volumetric Capacity']]
-    X3 = pd.read_csv('../Data/DataForSVR/MDV_PCA.csv')
-    y3 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Max Delta Volume']]
+    X1 = pd.read_csv('kratosbat/Data/DataForSVR/GC_PCA.csv')
+    y1 = pd.read_csv('kratosbat/Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)']]
+    X2 = pd.read_csv('kratosbat/Data/DataForSVR/VC_PCA.csv')
+    y2 = pd.read_csv('kratosbat/Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Volumetric Capacity']]
+    X3 = pd.read_csv('kratosbat/Data/DataForSVR/MDV_PCA.csv')
+    y3 = pd.read_csv('kratosbat/Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Max Delta Volume']]
     return X1, y1, X2, y2, X3, y3
 
 
