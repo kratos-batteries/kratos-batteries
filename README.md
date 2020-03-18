@@ -96,6 +96,8 @@ problem, SVM is known as a support vector regression (SVR). SVR is a kernel-base
 </p>
 
 ## Usage
+Below is an example of how a user can use the predict_tool to predict the properties of their electrode material.
 
-
-## Other components of README
+<p align="center">
+<img align="middle" src="images/All_SVR.png" width="600"> 
+</p>
