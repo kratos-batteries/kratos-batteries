@@ -7,11 +7,6 @@ Submodules
 Data Extraction
 -----------------------------
 
-.. automodule:: ExtractMethod.data_extract
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 .. automodule:: ExtractMethod.elemental_property_ext
    :members:
    :undoc-members:
@@ -31,11 +26,6 @@ Data Processing
    :show-inheritance:
 
 .. automodule:: DataProcess.magpie
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: DataProcess.userdata
    :members:
    :undoc-members:
    :show-inheritance:
@@ -62,15 +52,6 @@ Support Vector Regression
    :show-inheritance:
 
 .. automodule:: SVR.svr_model
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-Module contents
----------------
-
-.. automodule:: kratosbat
    :members:
    :undoc-members:
    :show-inheritance:
