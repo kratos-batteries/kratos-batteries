@@ -136,14 +136,14 @@ setup.py
 ## Neural Network - PyTorch
 Using Pytorch, a neural network  was created to predict gravimetric capacity, volumetric capacity, and max volume change for battery electrodes. The network was created through a sequential model, with two hidden layers. The model was then put through 1000 epochs to reduce mean squared error before a final model was produced to predict the desired properties.
 
-<img align="center" src="images/All_NN.png" width="600"> 
+<img align="middle" src="images/All_NN.png" width="600"> 
 
 This loss function and schematic of this NN is shown above for user validation.
 
 ## Support Vector Machine - Regression (SVR)
 SVR was used as a supervised learning model to analyze the data for regression analysis. 
 
-<img align="center" src="images/All_SVR.png" width="600"> 
+<img align="middle" src="images/All_SVR.png" width="600"> 
 
 ## Usage
 
