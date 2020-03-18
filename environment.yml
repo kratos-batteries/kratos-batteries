@@ -3,3 +3,5 @@ dependencies:
   - pandas
   - pytorch
   - scikit-learn
+  - numpy
+  - matplotlib
