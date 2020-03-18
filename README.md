@@ -18,78 +18,13 @@ Notebooks are provided in the `Examples` directory. You will require a `jupyter 
 ## Organization of Repository
 ```
 Examples/
-  BatteryData.csv
-  CrystalSystemsTable.csv
-  NewTraingingData_MinMaxScalar.csv
-  NewTraingingData_StandardScalar.csv
-  README.md
-  data_extract.py
-  example_runtrhough.ipynb
-  feature_process_SVR.ipynb
-  generate_inputs.py
-  Integrating PCA.ipynb
-  magpie.py
-  nn.py
-  PCA.ipynb
-  SecondPassNN.ipynb
-  svr_script.ipynb
-  Userdata.ipynb
 doc/
   Design/
-    Flow-Charts.pdf
-    usecases.md
   _build/
-    doctrees/
-      environment.pickle
-      index.doctree
-    html/
-      _sources/
-        index.rst.txt
-      _static/
-        alabaster.css
-        basic.css
-        custom.css
-        doctools.js
-        documentation_options.js
-        file.png
-        jquery-3.4.1.js
-        jquery.js
-        language_data.js
-        minus.png
-        plus.png
-        pygments.css
-        searchtools.js
-        underscore-1.3.1.js
-        underscore.js
-      .buildinfo
-      genindex.html
-      index.html
-      objects.inv
-      py-modindex.html
-      search.html
-      searchindex.js
-  Makefile
-  conf.py
-  index.rst
-  make.bat
 images/
-  All_NN.png
-  All_SVR.png
-  NN_lossfunction.png
-  NeuralNetworkFlow.png
-  SVR_CV.png
-  SVR_GC.png
-  SVR.MDV.png
-  logo.png
 kratosbat/
   Data/
     DataForSVR/
-      GC_PCA.csv
-      GC_data.csv
-      MDV_PCA.csv
-      MDV_data.csv
-      VC_PCA.csv
-      VC_data.csv
     BatteryData.csv
     CrystalSystemsTable.csv
     ElementalProperty.csv
@@ -118,13 +53,6 @@ kratosbat/
   ThirdPartyResource/
     magpie.py
   tests/
-    README.md
-    test_cross_validation
-    test_nn.py
-    test_svr_model.py
-    test_variable_selection_extraction
-  __init__.py
-  __main__.py
   predict_tools.py
 paper/
   Elemental Properties.pdf
@@ -160,14 +88,15 @@ Using Pytorch, a neural network  was created to predict gravimetric capacity, vo
 This loss function and schematic of this NN is shown above for user validation.
 
 ## Support Vector Machine - Regression (SVR)
-We compared the performance of NN with another machine-learning model, SVM. When used for a regression
-problem, SVM is known as a support vector regression (SVR). SVR is a kernel-based regression technique known for its robust performance in complex data representations. It works by mapping nonlinearly separable data in real space to higher dimensional space via a kernel function. We have used the radial basis function (RBF) kernel for this work. In addition, SVR depends on two important parameters (C and ?) that control the quality of the result. These parameters were tuned by using the grid search algorithm of sklearn. We varied C and ? logarithmically in between each $10{?5}$ and $10{5}$ . For each of the possible combinations of C and ?, SVR computations were performed using 10-fold cross-validation to calculate the MSE.
+We compared the performance of NN with another machine-learning model, SVM. When used for a regression problem, SVM is known as a support vector regression (SVR). SVR is a kernel-based regression technique known for its robust performance in complex data representations. It works by mapping nonlinearly separable datainreal space to higher dimensional space via a kernel function. We have used the radial basis function (RBF) kernel for this work. In addition, SVR depends on two important parameters (C and ?) that control the quality of the result. These parameters were tuned by using the grid search algorithm of sklearn. We varied C and ? logarithmically in between each $ 10^{-5} $ and $ 10^5 $ . For each of the possible combinations of C and ?, SVR computations were performed using 10-fold cross-validation to calculate the MSE.
 
 <p align="center">
 <img align="middle" src="images/All_SVR.png" width="600"> 
 </p>
 
 ## Usage
+Below is an example of how a user can use the predict_tool to predict the properties of their electrode material.
 
-
-## Other components of README
+<p align="center">
+<img align="middle" src="images/All_SVR.png" width="600"> 
+</p>
