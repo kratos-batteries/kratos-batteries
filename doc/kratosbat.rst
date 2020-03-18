@@ -1,7 +1,7 @@
 kratosbat Predictor Tool Package
 =================================
 
-.. automodule:: predict_tools
+.. automodule:: kratosbat.predict_tools
    :members:
    :undoc-members:
    :show-inheritance:
