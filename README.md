@@ -118,6 +118,7 @@ kratosbat/
     test_variable_selection_extraction
   __init__.py
   __main__.py
+  predict_tools.py
 paper/
   Elemental Properties.pdf
   Machine Learning the Voltage of Electrode Materials.pdf
