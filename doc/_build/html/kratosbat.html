@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>kratosbat package &mdash; kratos-batteries March 18, 2020 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="kratosbat" href="module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> kratos-batteries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="module.html">kratosbat</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">kratosbat package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ExtractMethod.elemental_property_ext">Data Extraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-DataProcess.PCA">Data Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-NN.nn">Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SVR.cross_validation">Support Vector Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">kratos-batteries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="module.html">kratosbat</a> &raquo;</li>
+        
+      <li>kratosbat package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/kratosbat.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kratosbat-package">
+<h1>kratosbat package<a class="headerlink" href="#kratosbat-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ExtractMethod.elemental_property_ext">
+<span id="data-extraction"></span><h2>Data Extraction<a class="headerlink" href="#module-ExtractMethod.elemental_property_ext" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ExtractMethod.elemental_property_ext.get_elementProperty">
+<code class="sig-prename descclassname">ExtractMethod.elemental_property_ext.</code><code class="sig-name descname">get_elementProperty</code><span class="sig-paren">(</span><em class="sig-param">clean_battery_df=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ExtractMethod.elemental_property_ext.get_elementProperty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-ExtractMethod.get_all_trainingdata"></span><dl class="function">
+<dt id="ExtractMethod.get_all_trainingdata.get_all_variable">
+<code class="sig-prename descclassname">ExtractMethod.get_all_trainingdata.</code><code class="sig-name descname">get_all_variable</code><span class="sig-paren">(</span><em class="sig-param">clean_battery_df=None</em>, <em class="sig-param">element_attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ExtractMethod.get_all_trainingdata.get_all_variable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-DataProcess.PCA">
+<span id="data-processing"></span><h2>Data Processing<a class="headerlink" href="#module-DataProcess.PCA" title="Permalink to this headline">¶</a></h2>
+<p>This PCA analysis will produce normalized data to be used for the training model</p>
+<dl class="function">
+<dt id="DataProcess.PCA.pcacsv">
+<code class="sig-prename descclassname">DataProcess.PCA.</code><code class="sig-name descname">pcacsv</code><span class="sig-paren">(</span><em class="sig-param">DF</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.PCA.pcacsv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="DataProcess.PCA.pcamms">
+<code class="sig-prename descclassname">DataProcess.PCA.</code><code class="sig-name descname">pcamms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.PCA.pcamms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="DataProcess.PCA.pcasts">
+<code class="sig-prename descclassname">DataProcess.PCA.</code><code class="sig-name descname">pcasts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.PCA.pcasts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="DataProcess.PCA.tranmms">
+<code class="sig-prename descclassname">DataProcess.PCA.</code><code class="sig-name descname">tranmms</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.PCA.tranmms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="DataProcess.PCA.transts">
+<code class="sig-prename descclassname">DataProcess.PCA.</code><code class="sig-name descname">transts</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.PCA.transts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-DataProcess.magpie"></span><dl class="class">
+<dt id="DataProcess.magpie.MagpieServer">
+<em class="property">class </em><code class="sig-prename descclassname">DataProcess.magpie.</code><code class="sig-name descname">MagpieServer</code><span class="sig-paren">(</span><em class="sig-param">url='http://josquin.northwestern.edu:4581/'</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object to store how to connect to a server running Magpie</p>
+<dl class="method">
+<dt id="DataProcess.magpie.MagpieServer.api_version">
+<code class="sig-name descname">api_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer.api_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the API version of the server.</p>
+<p>Prints error message of that version is different than what is supported
+by this wrapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>API version</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="DataProcess.magpie.MagpieServer.generate_attributes">
+<code class="sig-name descname">generate_attributes</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">entries</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer.generate_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate attributes that serve as input to a certain model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – str, name of model</p></li>
+<li><p><strong>entries</strong> – list, list of entries to be run (as strings)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pandas array, where [i,j] is attribute j of entries[i]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="DataProcess.magpie.MagpieServer.get_model_info">
+<code class="sig-name descname">get_model_info</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer.get_model_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information about a specific model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – str, name of model</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict, information about a model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="DataProcess.magpie.MagpieServer.models">
+<code class="sig-name descname">models</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer.models" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information about models held by this server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dict, Information about all the models</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="DataProcess.magpie.MagpieServer.run_model">
+<code class="sig-name descname">run_model</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">entries</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer.run_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a particular model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – str, Name of model to be run</p></li>
+<li><p><strong>entries</strong> – list, list of entries to be run (as strings)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Predicted values. Also generates the probabilities</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>for membership in each class for classifier models</dt><dd><p>Second column is always the predicted value as a number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="DataProcess.magpie.MagpieServer.status">
+<code class="sig-name descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.magpie.MagpieServer.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the status of the Magpie server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Status of server as dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-DataProcess.variable_selection_extraction"></span><p>This sub module’s purpose is to obtain a new normalized dataset for SVR</p>
+<dl class="function">
+<dt id="DataProcess.variable_selection_extraction.get_data_rfe">
+<code class="sig-prename descclassname">DataProcess.variable_selection_extraction.</code><code class="sig-name descname">get_data_rfe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.variable_selection_extraction.get_data_rfe" title="Permalink to this definition">¶</a></dt>
+<dd><p>from this function we can get a data set to train our RFE model to select variable</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="DataProcess.variable_selection_extraction.pca_get_csv">
+<code class="sig-prename descclassname">DataProcess.variable_selection_extraction.</code><code class="sig-name descname">pca_get_csv</code><span class="sig-paren">(</span><em class="sig-param">gc_df</em>, <em class="sig-param">vc_df</em>, <em class="sig-param">mdv_df</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.variable_selection_extraction.pca_get_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creating .csv data from new PCA data</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="DataProcess.variable_selection_extraction.svr_linear_rfe">
+<code class="sig-prename descclassname">DataProcess.variable_selection_extraction.</code><code class="sig-name descname">svr_linear_rfe</code><span class="sig-paren">(</span><em class="sig-param">x_train</em>, <em class="sig-param">y_train</em><span class="sig-paren">)</span><a class="headerlink" href="#DataProcess.variable_selection_extraction.svr_linear_rfe" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn">http://scikit-learn.org/stable/modules/generated/sklearn</a>.    feature_selection.RFE.html#sklearn.feature_selection.RFE
+a <a href="#id1"><span class="problematic" id="id2">coef_</span></a> attribute or a <a href="#id3"><span class="problematic" id="id4">feature_importances_</span></a> attribute</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-NN.nn">
+<span id="neural-network"></span><h2>Neural Network<a class="headerlink" href="#module-NN.nn" title="Permalink to this headline">¶</a></h2>
+<p>Module that contains the functions responsible for creating trained
+neural network models for capacity and for volume change</p>
+<dl class="function">
+<dt id="NN.nn.nn_capacity">
+<code class="sig-prename descclassname">NN.nn.</code><code class="sig-name descname">nn_capacity</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#NN.nn.nn_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a dataframe, the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints as the input parameters and returns a trained    neural network to return gravimetric and volumetric capacity</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="NN.nn.nn_volume">
+<code class="sig-prename descclassname">NN.nn.</code><code class="sig-name descname">nn_volume</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#NN.nn.nn_volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes dataframe and returns the volume change of the    electrode. Parameters are the dataframe,    the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-SVR.cross_validation">
+<span id="support-vector-regression"></span><h2>Support Vector Regression<a class="headerlink" href="#module-SVR.cross_validation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="SVR.cross_validation.GC_kernal_select">
+<code class="sig-prename descclassname">SVR.cross_validation.</code><code class="sig-name descname">GC_kernal_select</code><span class="sig-paren">(</span><em class="sig-param">X1</em>, <em class="sig-param">y1</em><span class="sig-paren">)</span><a class="headerlink" href="#SVR.cross_validation.GC_kernal_select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="SVR.cross_validation.SVR_model_validation">
+<code class="sig-prename descclassname">SVR.cross_validation.</code><code class="sig-name descname">SVR_model_validation</code><span class="sig-paren">(</span><em class="sig-param">X1</em>, <em class="sig-param">y1</em>, <em class="sig-param">X2</em>, <em class="sig-param">y2</em>, <em class="sig-param">X3</em>, <em class="sig-param">y3</em><span class="sig-paren">)</span><a class="headerlink" href="#SVR.cross_validation.SVR_model_validation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="SVR.cross_validation.VC_kernal_select">
+<code class="sig-prename descclassname">SVR.cross_validation.</code><code class="sig-name descname">VC_kernal_select</code><span class="sig-paren">(</span><em class="sig-param">X3</em>, <em class="sig-param">y3</em><span class="sig-paren">)</span><a class="headerlink" href="#SVR.cross_validation.VC_kernal_select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="SVR.cross_validation.svr_data">
+<code class="sig-prename descclassname">SVR.cross_validation.</code><code class="sig-name descname">svr_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SVR.cross_validation.svr_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-SVR.svr_model"></span><dl class="function">
+<dt id="SVR.svr_model.GC_svr_model">
+<code class="sig-prename descclassname">SVR.svr_model.</code><code class="sig-name descname">GC_svr_model</code><span class="sig-paren">(</span><em class="sig-param">X1</em>, <em class="sig-param">y1</em><span class="sig-paren">)</span><a class="headerlink" href="#SVR.svr_model.GC_svr_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="SVR.svr_model.MDV_svr_model">
+<code class="sig-prename descclassname">SVR.svr_model.</code><code class="sig-name descname">MDV_svr_model</code><span class="sig-paren">(</span><em class="sig-param">X3</em>, <em class="sig-param">y3</em><span class="sig-paren">)</span><a class="headerlink" href="#SVR.svr_model.MDV_svr_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="SVR.svr_model.VC_svr_model">
+<code class="sig-prename descclassname">SVR.svr_model.</code><code class="sig-name descname">VC_svr_model</code><span class="sig-paren">(</span><em class="sig-param">X2</em>, <em class="sig-param">y2</em><span class="sig-paren">)</span><a class="headerlink" href="#SVR.svr_model.VC_svr_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="SVR.svr_model.svr_data">
+<code class="sig-prename descclassname">SVR.svr_model.</code><code class="sig-name descname">svr_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SVR.svr_model.svr_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="module.html" class="btn btn-neutral float-left" title="kratosbat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Yousef Baioumy, Andrew Gonsalves, Lester Jiang, Mitchell Kitt, Jizhou Liu
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
