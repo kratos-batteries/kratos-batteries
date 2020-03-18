@@ -1,4 +1,4 @@
-There are three different use cases for this project:
+There are four different use cases for this project:
 
 1. User will input electrolyte working ion of choice for battery design.
 - Software will ask for electrolyte working ion
