@@ -18,7 +18,7 @@ def get_data_rfe():
     """
     from this function we can get a data set to train our RFE model to select variable
     """
-    trainset = pd.read_csv('../Data/TrainingData.csv')
+    trainset = pd.read_csv('kratosbat/Data/TrainingData.csv')
     lb_model = preprocessing.LabelBinarizer()
     wi_data = lb_model.fit_transform(np.array(trainset.loc[:, ['Working Ion']]))
     cs_data = lb_model.fit_transform(np.array(trainset.loc[:, ['Crystal System']]))
@@ -65,7 +65,7 @@ def get_data_rfe():
     standard_data = pd.DataFrame(pss_fit)
 
     output_data = \
-    pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)',
+    pd.read_csv('kratosbat/Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)',
                                                                       'Volumetric Capacity',
                                                                       'Max Delta Volume']]
 
