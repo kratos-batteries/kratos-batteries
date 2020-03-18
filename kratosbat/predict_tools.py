@@ -27,7 +27,7 @@ def convert(y_param):
     print(result)
 
 
-def nn_capacity(dataframe, d_in, size_h, h_2, d_out, number_samples):
+def nn_capacity(dataframe, d_in, H, h_2, d_out, N):
     """
     Takes a dataframe, the number of inputs, the number of nodes
     for the first hidden layer, the number of nodes for the second
@@ -68,15 +68,15 @@ def nn_capacity(dataframe, d_in, size_h, h_2, d_out, number_samples):
     y_train_torch = torch.tensor(y_train_np, device=device, dtype=dtype)
 
     # Defining weights
-    w1 = torch.randn(d_in, size_h, device=device, dtype=dtype)
-    w2 = torch.randn(size_h, d_out, device=device, dtype=dtype)
+    w1 = torch.randn(d_in, H, device=device, dtype=dtype)
+    w2 = torch.randn(H, d_out, device=device, dtype=dtype)
     # w3 = torch.randn(H2, D_out, device=device, dtype=dtype)
 
     # define model
     model = torch.nn.Sequential(
-        torch.nn.Linear(d_in, size_h),
+        torch.nn.Linear(d_in, H),
         torch.nn.LeakyReLU(),
-        torch.nn.Linear(size_h, h_2),
+        torch.nn.Linear(H, h_2),
         torch.nn.LeakyReLU(),
         torch.nn.Linear(h_2, d_out),
         # nn.Softmax(dim=1) #normalizing the data,
@@ -128,12 +128,12 @@ def nn_capacity(dataframe, d_in, size_h, h_2, d_out, number_samples):
 
 
 def nn_volume(dataframe, d_in, H, h_2, d_out, N):
-    """Takes dataframe and returns the volume change of the\
-    electrode. Parameters are the dataframe,\
-    the number of inputs, the number of nodes\
-    for the first hidden layer, the number of nodes for the second\
-    hidden layer, the number of outputs, and the total number of\
-    datapoints."""
+    """
+    Takes dataframe and returns the volume change of the electrode. Parameters
+    are the dataframe, the number of inputs, the number of nodes for the
+    first hidden layer, the number of nodes for the second hidden layer, the
+    number of outputs, and the total number of datapoints.
+    """
 
     # categorizing the input and output data
     bat_data = pd.read_csv(str(dataframe))
@@ -228,7 +228,6 @@ def generate_model_df(ion, crystal_system, spacegroup, charge, discharge):
     The dataframe must contain the working ion, crystal system,
     spacegroup number, charge formula, and discharge formula
     """
-    import pandas as pd
 
     bat_dataframe = pd.DataFrame()
     bat_dataframe['Working Ion'] = [str(ion)]
