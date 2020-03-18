@@ -26,10 +26,13 @@ Examples/
   data_extract.py
   example_runtrhough.ipynb
   feature_process_SVR.ipynb
+  generate_inputs.py
   Integrating PCA.ipynb
+  magpie.py
   nn.py
   PCA.ipynb
   SecondPassNN.ipynb
+  svr_script.ipynb
   Userdata.ipynb
 doc/
   Design/
@@ -70,6 +73,10 @@ doc/
   index.rst
   make.bat
 images/
+  All_NN.png
+  All_SVR.png
+  NN_lossfunction.png
+  NeuralNetworkFlow.png
   SVR_CV.png
   SVR_GC.png
   SVR.MDV.png
