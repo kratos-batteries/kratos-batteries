@@ -5,7 +5,13 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
 from sklearn.metrics import mean_squared_error
+'''
+this file is to use 10 fold cross-validation to select best kernal function 
+that give best performence in SVR model.
 
+after
+
+'''
 def svr_data():
     X1=pd.read_csv('../Data/DataForSVR/GC_data.csv')
     y1=pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:,['Gravimetric Capacity (units)']]

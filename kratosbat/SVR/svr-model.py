@@ -1,5 +1,5 @@
 from sklearn.svm import SVR
-import joblib
+from sklearn.externals import joblib
 from sklearn.model_selection import GridSearchCV
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,9 +36,5 @@ def MDV_svr_model(X3,y3):
     svr.fit(X3, y3)
     joblib.dump(svr, 'svr_MDV.pkl')        # Save model
     print(svr.best_params_)
-    return
 
-X1,y1,X2,y2,X3,y3 = svr_data()
-GC_svr_model(X1,y1)
-VC_svr_model(X2,y2)
-MDV_svr_model(X3,y3)
+    return

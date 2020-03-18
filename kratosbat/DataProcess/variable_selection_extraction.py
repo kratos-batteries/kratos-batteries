@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 
+
 def get_data_rfe():
     """
     from this function we can get a data set to train our RFE model to select variable
@@ -73,6 +74,7 @@ def get_data_rfe():
                                                         test_size=0.2,
                                                         random_state=0)
     return x_train, x_test, y_train, y_test
+
 
 def svr_linear_rfe(x_train, y_train):
     """
