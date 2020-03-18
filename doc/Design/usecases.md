@@ -20,3 +20,4 @@ with the ploted data to select certain points in the dataset
 3. Classify electrode material for specific battery design.
 - From the selected point in the dataset, classify the electrode material
 
+4. A simple and easy to use software to navigate through the Materials Project Database
