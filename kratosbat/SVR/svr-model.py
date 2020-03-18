@@ -5,7 +5,14 @@ from sklearn.model_selection import KFold
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
+'''
+This part is to establish SVR model for Gravimetric Capacity, Volumetric Capacity and Max Delta Volume
+prediction for certain electrode materials. Compare to multi-lable model, three seperate single-lable model 
+can let us select different features for different output, which can greatly reduce the noise of other less
+important features.
+'''
 
+# this function used for read data in Data directory.
 def svr_data():
     X1 = pd.read_csv('../Data/DataForSVR/GC_data.csv')
     y1 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:,['Gravimetric Capacity (units)']]
@@ -15,7 +22,8 @@ def svr_data():
     y3 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:,['Max Delta Volume']]
     return X1, y1, X2, y2, X3, y3
 
-
+# following three fuctions are used for estabilish three different model,
+# with 'rbf' kernal function based SVR model.
 def GC_svr_model(X1, y1):
     X1_train, X1_test, y1_train, y1_test =train_test_split(X1, y1, test_size=0.2, random_state=123)
     svr = SVR(kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, C=16.0, epsilon=0.1, \
