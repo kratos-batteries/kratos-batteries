@@ -96,8 +96,6 @@ kratosbat/
     variable_selection_extraction.py
   ExtractMethod
     data_extract.py
-    elemetal_property_ext.py
-    get_all_trainingdata.py
   NN/
     NEWTrainingData_MinMaxScaler.csv
     NEWTrainingData_StandardScaler.csv
