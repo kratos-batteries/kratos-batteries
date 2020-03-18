@@ -20,7 +20,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../kratosbat/'))
->>>>>>> 2ca62d52f066e64940310fbf13275b340de64d8f
+
 
 # -- Project information -----------------------------------------------------
 
