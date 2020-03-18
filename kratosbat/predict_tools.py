@@ -10,21 +10,28 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 def convert(scaled):
-    """Function to convert from scaled data to normal data"""
+    """
+    Function to convert from scaled data to normal data
+
+    This function takes the output of the model and will return the actual
+    property quantities.
+    """
     df_output = pd.read_csv('../kratosbat/Data/TrainingData.csv')\
         [['Gravimetric Capacity (units)', 'Volumetric Capacity']]
     ms = MinMaxScaler()
-    ms.fit(DF_OUTPUT)
+    ms.fit(df_output)
     result = MS.inverse_transform(y)
     print(result)
 
 
 def nn_capacity(dataframe, d_in, H, h_2, d_out, N):
-    """Takes a dataframe, the number of inputs, the number of nodes\
-    for the first hidden layer, the number of nodes for the second\
-    hidden layer, the number of outputs, and the total number of\
-    datapoints as the input parameters and returns a trained\
-    neural network to return gravimetric and volumetric capacity"""
+    """
+    Takes a dataframe, the number of inputs, the number of nodes
+    for the first hidden layer, the number of nodes for the second
+    hidden layer, the number of outputs, and the total number of
+    datapoints as the input parameters and returns a trained
+    neural network to return gravimetric and volumetric capacity
+    """
     # categorizing the input and output data
     bat_data = pd.read_csv(str(dataframe))
     train_bat = bat_data
