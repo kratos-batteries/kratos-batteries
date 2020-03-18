@@ -11,8 +11,9 @@ This package can be used to predict the change in volume as well as the volumetr
 install code here (need a package name)
 ```
 ### Software Dependencies
-- Python 3
+- Python 3 (>=3.6)
   - See environment.yml for environment
+Notebooks are provided in the `Examples` directory. You will require a `jupyter notebook`. 
 ## Organization of Repository
 ```
 doc/
@@ -82,6 +83,8 @@ README.md
 environment.yml
 setup.py
 ```
+## Neural Network - PyTorch
+The neural network created to predict gravimetric and volumetric capacity, as well as max volume change, for battery electrodes was created using PyTorch. The network was created through a sequential model, with two hidden layers. The model was then put through 1000 epochs to reduce mean squared error before a final model was produced to predict the quantities of interest.
 ## Usage
 
 

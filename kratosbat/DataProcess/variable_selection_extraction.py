@@ -18,7 +18,7 @@ def get_data_rfe():
     """
     from this function we can get a data set to train our RFE model to select variable
     """
-    trainset = pd.read_csv('TrainingData.csv')
+    trainset = pd.read_csv('../Data/TrainingData.csv')
     lb_model = preprocessing.LabelBinarizer()
     wi_data = lb_model.fit_transform(np.array(trainset.loc[:, ['Working Ion']]))
     cs_data = lb_model.fit_transform(np.array(trainset.loc[:, ['Crystal System']]))
@@ -65,9 +65,9 @@ def get_data_rfe():
     standard_data = pd.DataFrame(pss_fit)
 
     output_data = \
-    pd.read_csv('NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)',
-                                                              'Volumetric Capacity',
-                                                              'Max Delta Volume']]
+    pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)',
+                                                                      'Volumetric Capacity',
+                                                                      'Max Delta Volume']]
 
     x_train, x_test, y_train, y_test = train_test_split(standard_data,
                                                         output_data,
@@ -116,16 +116,16 @@ def pca_get_csv(gc_df, vc_df, mdv_df):
     pca_model = PCA(n_components=135)
     new_data1 = pca_model.fit_transform(gc_df)
     new_df1 = pd.DataFrame(new_data1)
-    new_df1.to_csv('./Data/Data for svr/GC_PCA.csv')
+    new_df1.to_csv('../Data/DataForSVR/GC_CPA.csv')
 
     # get a .csv file for Volumetric Capacity after PCA
     pca_model = PCA(n_components=135)
     new_data2 = pca_model.fit_transform(vc_df)
     new_df2 = pd.DataFrame(new_data2)
-    new_df2.to_csv('./Data/Data for svr/VC_PCA.csv')
+    new_df2.to_csv('../Data/DataForSVR/VC_CPA.csv')
 
     # get a .csv file for Max Delta Volume after PCA
     pca_model = PCA(n_components=131)
     new_data3 = pca_model.fit_transform(mdv_df)
     new_df3 = pd.DataFrame(new_data3)
-    new_df3.to_csv('./Data/Data for svr/MDV_PCA.csv')
+    new_df3.to_csv('../Data/DataForSVR/MDV_CPA.csv')

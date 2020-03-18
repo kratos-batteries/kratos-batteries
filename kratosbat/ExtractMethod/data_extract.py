@@ -105,7 +105,7 @@ def get_bat_dat(mapi_key):
 
     # exports the clean dataframe as a csv to the repository
     # this ensures it does not need to be run each time
-    clean_battery_df.to_csv(path_or_buf='./BatteryData.csv')
+    clean_battery_df.to_csv(path_or_buf='../Data/BatteryData.csv')
 
     # returns the cleaned dataframe
     return clean_battery_df
@@ -121,7 +121,7 @@ def update_check(mapi_key):
     lengths are not the same, it recommends to run get_bat_dat() to update the
     csv file.
     """
-    current_df = pd.read_csv('BatteryData.csv')
+    current_df = pd.read_csv('../Data/BatteryData.csv')
     current_len = len(current_df)
 
     # if __name__ == "__main__":
@@ -156,8 +156,8 @@ def get_element_property(clean_battery_df=None):
 
     m = MagpieServer()
     if clean_battery_df is None:
-        if os.path.exists('./Data/BatteryData.csv'):
-            clean_battery_df = pd.read_csv('./Data/BatteryData.csv')
+        if os.path.exists('../Data/BatteryData.csv'):
+            clean_battery_df = pd.read_csv('../Data/BatteryData.csv')
     # getting Mean and Deviation of Element Property for Charge_Formula
     charge_formula = clean_battery_df['Charge Formula']
     df_mean_charge = m.generate_attributes("oqmd-Eg", charge_formula).\
@@ -268,7 +268,7 @@ def get_element_property(clean_battery_df=None):
     element_attributes = pd.concat(
         objs=[df_mean_charge, df_dev_charge,
               df_mean_discharge, df_dev_discharge], axis=1)
-    element_attributes.to_csv(path_or_buf='./Data/ElementalProperty.csv')
+    element_attributes.to_csv(path_or_buf='../Data/ElementalProperty.csv')
     return element_attributes
 
 
@@ -284,11 +284,11 @@ def get_all_variable(clean_battery_df=None, element_attributes=None):
     """
 
     if clean_battery_df is None:
-        if os.path.exists('./Data/BatteryData.csv'):
-            clean_battery_df = pd.read_csv('./Data/BatteryData.csv')
+        if os.path.exists('../Data/BatteryData.csv'):
+            clean_battery_df = pd.read_csv('../Data/BatteryData.csv')
     if element_attributes is None:
-        if os.path.exists('./Data/ElementalProperty.csv'):
-            element_attributes = pd.read_csv('./Data/ElementalProperty.csv')
+        if os.path.exists('../Data/ElementalProperty.csv'):
+            element_attributes = pd.read_csv('../Data/ElementalProperty.csv')
     # select features we need in training our model
     train_set = clean_battery_df[['Working Ion', 'Crystal Lattice',
                                   'Spacegroup Number',
@@ -299,5 +299,5 @@ def get_all_variable(clean_battery_df=None, element_attributes=None):
     train_set.reset_index(drop=False, inplace=True)
     train_set = pd.concat(objs=[train_set, element_attributes], axis=1)
     # make a .csv file to our working directory.
-    train_set.to_csv(path_or_buf='./Data/TrainingData.csv')
+    train_set.to_csv(path_or_buf='../Data/TrainingData.csv')
     return train_set
