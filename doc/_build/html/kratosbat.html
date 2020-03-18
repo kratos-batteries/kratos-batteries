@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>kratosbat package &mdash; kratos-batteries March 18, 2020 documentation</title>
+  <title>kratosbat Predictor Tool Package &mdash; kratos-batteries March 18, 2020 documentation</title>
   
 
   
@@ -82,12 +82,8 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="module.html">kratosbat</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">kratosbat package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-kratosbat.ExtractMethod.elemental_property_ext">Data Extraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-kratosbat.DataProcess.PCA">Data Processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-kratosbat.NN.nn">Neural Network</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-kratosbat.SVR.cross_validation">Support Vector Regression</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">kratosbat Predictor Tool Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-kratosbat">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -139,7 +135,7 @@
         
           <li><a href="module.html">kratosbat</a> &raquo;</li>
         
-      <li>kratosbat package</li>
+      <li>kratosbat Predictor Tool Package</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,112 +154,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="kratosbat-package">
-<h1>kratosbat package<a class="headerlink" href="#kratosbat-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-kratosbat.ExtractMethod.elemental_property_ext">
-<span id="data-extraction"></span><h2>Data Extraction<a class="headerlink" href="#module-kratosbat.ExtractMethod.elemental_property_ext" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-kratosbat.predict_tools">
+<span id="kratosbat-predictor-tool-package"></span><h1>kratosbat Predictor Tool Package<a class="headerlink" href="#module-kratosbat.predict_tools" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="kratosbat.ExtractMethod.elemental_property_ext.get_elementProperty">
-<code class="sig-prename descclassname">kratosbat.ExtractMethod.elemental_property_ext.</code><code class="sig-name descname">get_elementProperty</code><span class="sig-paren">(</span><em class="sig-param">clean_battery_df=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.ExtractMethod.elemental_property_ext.get_elementProperty" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<span class="target" id="module-kratosbat.ExtractMethod.get_all_trainingdata"></span><dl class="function">
-<dt id="kratosbat.ExtractMethod.get_all_trainingdata.get_all_variable">
-<code class="sig-prename descclassname">kratosbat.ExtractMethod.get_all_trainingdata.</code><code class="sig-name descname">get_all_variable</code><span class="sig-paren">(</span><em class="sig-param">clean_battery_df=None</em>, <em class="sig-param">element_attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.ExtractMethod.get_all_trainingdata.get_all_variable" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</div>
-<div class="section" id="module-kratosbat.DataProcess.PCA">
-<span id="data-processing"></span><h2>Data Processing<a class="headerlink" href="#module-kratosbat.DataProcess.PCA" title="Permalink to this headline">¶</a></h2>
-<p>This PCA analysis will produce normalized data to be used for the training model</p>
-<dl class="function">
-<dt id="kratosbat.DataProcess.PCA.pcacsv">
-<code class="sig-prename descclassname">kratosbat.DataProcess.PCA.</code><code class="sig-name descname">pcacsv</code><span class="sig-paren">(</span><em class="sig-param">DF</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.DataProcess.PCA.pcacsv" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="kratosbat.predict_tools.convert">
+<code class="sig-prename descclassname">kratosbat.predict_tools.</code><code class="sig-name descname">convert</code><span class="sig-paren">(</span><em class="sig-param">scaled</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.predict_tools.convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to convert from scaled data to normal data</p>
+</dd></dl>
 
 <dl class="function">
-<dt id="kratosbat.DataProcess.PCA.pcamms">
-<code class="sig-prename descclassname">kratosbat.DataProcess.PCA.</code><code class="sig-name descname">pcamms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.DataProcess.PCA.pcamms" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="kratosbat.predict_tools.generate_model_df">
+<code class="sig-prename descclassname">kratosbat.predict_tools.</code><code class="sig-name descname">generate_model_df</code><span class="sig-paren">(</span><em class="sig-param">Ion</em>, <em class="sig-param">CrystalSystem</em>, <em class="sig-param">Spacegroup</em>, <em class="sig-param">Charge</em>, <em class="sig-param">Discharge</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.predict_tools.generate_model_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates dataframe to input into the neural network model. The dataframe must contain
+the working ion, crystal system, spacegroup number, charge formula, and discharge formula</p>
+</dd></dl>
 
 <dl class="function">
-<dt id="kratosbat.DataProcess.PCA.pcasts">
-<code class="sig-prename descclassname">kratosbat.DataProcess.PCA.</code><code class="sig-name descname">pcasts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.DataProcess.PCA.pcasts" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.DataProcess.PCA.tranmms">
-<code class="sig-prename descclassname">kratosbat.DataProcess.PCA.</code><code class="sig-name descname">tranmms</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.DataProcess.PCA.tranmms" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.DataProcess.PCA.transts">
-<code class="sig-prename descclassname">kratosbat.DataProcess.PCA.</code><code class="sig-name descname">transts</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.DataProcess.PCA.transts" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</div>
-<div class="section" id="module-kratosbat.NN.nn">
-<span id="neural-network"></span><h2>Neural Network<a class="headerlink" href="#module-kratosbat.NN.nn" title="Permalink to this headline">¶</a></h2>
-<p>Module that contains the functions responsible for creating trained
-neural network models for capacity and for volume change</p>
-<dl class="function">
-<dt id="kratosbat.NN.nn.nn_capacity">
-<code class="sig-prename descclassname">kratosbat.NN.nn.</code><code class="sig-name descname">nn_capacity</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.NN.nn.nn_capacity" title="Permalink to this definition">¶</a></dt>
+<dt id="kratosbat.predict_tools.nn_capacity">
+<code class="sig-prename descclassname">kratosbat.predict_tools.</code><code class="sig-name descname">nn_capacity</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.predict_tools.nn_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes a dataframe, the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints as the input parameters and returns a trained    neural network to return gravimetric and volumetric capacity</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="kratosbat.NN.nn.nn_volume">
-<code class="sig-prename descclassname">kratosbat.NN.nn.</code><code class="sig-name descname">nn_volume</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.NN.nn.nn_volume" title="Permalink to this definition">¶</a></dt>
+<dt id="kratosbat.predict_tools.nn_volume">
+<code class="sig-prename descclassname">kratosbat.predict_tools.</code><code class="sig-name descname">nn_volume</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.predict_tools.nn_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes dataframe and returns the volume change of the    electrode. Parameters are the dataframe,    the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-kratosbat.SVR.cross_validation">
-<span id="support-vector-regression"></span><h2>Support Vector Regression<a class="headerlink" href="#module-kratosbat.SVR.cross_validation" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="kratosbat.SVR.cross_validation.GC_kernal_select">
-<code class="sig-prename descclassname">kratosbat.SVR.cross_validation.</code><code class="sig-name descname">GC_kernal_select</code><span class="sig-paren">(</span><em class="sig-param">X1</em>, <em class="sig-param">y1</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.cross_validation.GC_kernal_select" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.SVR.cross_validation.SVR_model_validation">
-<code class="sig-prename descclassname">kratosbat.SVR.cross_validation.</code><code class="sig-name descname">SVR_model_validation</code><span class="sig-paren">(</span><em class="sig-param">X1</em>, <em class="sig-param">y1</em>, <em class="sig-param">X2</em>, <em class="sig-param">y2</em>, <em class="sig-param">X3</em>, <em class="sig-param">y3</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.cross_validation.SVR_model_validation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.SVR.cross_validation.VC_kernal_select">
-<code class="sig-prename descclassname">kratosbat.SVR.cross_validation.</code><code class="sig-name descname">VC_kernal_select</code><span class="sig-paren">(</span><em class="sig-param">X3</em>, <em class="sig-param">y3</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.cross_validation.VC_kernal_select" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.SVR.cross_validation.svr_data">
-<code class="sig-prename descclassname">kratosbat.SVR.cross_validation.</code><code class="sig-name descname">svr_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.cross_validation.svr_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<span class="target" id="module-kratosbat.SVR.svr_model"></span><dl class="function">
-<dt id="kratosbat.SVR.svr_model.GC_svr_model">
-<code class="sig-prename descclassname">kratosbat.SVR.svr_model.</code><code class="sig-name descname">GC_svr_model</code><span class="sig-paren">(</span><em class="sig-param">X1</em>, <em class="sig-param">y1</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.svr_model.GC_svr_model" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.SVR.svr_model.MDV_svr_model">
-<code class="sig-prename descclassname">kratosbat.SVR.svr_model.</code><code class="sig-name descname">MDV_svr_model</code><span class="sig-paren">(</span><em class="sig-param">X3</em>, <em class="sig-param">y3</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.svr_model.MDV_svr_model" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.SVR.svr_model.VC_svr_model">
-<code class="sig-prename descclassname">kratosbat.SVR.svr_model.</code><code class="sig-name descname">VC_svr_model</code><span class="sig-paren">(</span><em class="sig-param">X2</em>, <em class="sig-param">y2</em><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.svr_model.VC_svr_model" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="kratosbat.SVR.svr_model.svr_data">
-<code class="sig-prename descclassname">kratosbat.SVR.svr_model.</code><code class="sig-name descname">svr_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kratosbat.SVR.svr_model.svr_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="module-kratosbat">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-kratosbat" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

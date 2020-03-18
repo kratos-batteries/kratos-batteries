@@ -1,47 +1,15 @@
-kratosbat package
-==================
+kratosbat Predictor Tool Package
+=================================
 
-Submodules
-----------
-
-Data Extraction
------------------------------
-
-.. automodule:: kratosbat.ExtractMethod.elemental_property_ext
+.. automodule:: kratosbat.predict_tools
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: kratosbat.ExtractMethod.get_all_trainingdata
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Module contents
+---------------
 
-Data Processing
---------------------------
-
-.. automodule:: kratosbat.DataProcess.PCA
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Neural Network
-----------------------------------
-
-.. automodule:: kratosbat.NN.nn
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Support Vector Regression
---------------------------
-
-.. automodule:: kratosbat.SVR.cross_validation
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: kratosbat.SVR.svr_model
+.. automodule:: kratosbat
    :members:
    :undoc-members:
    :show-inheritance:
