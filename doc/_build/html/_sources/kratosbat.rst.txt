@@ -7,12 +7,12 @@ Submodules
 Data Extraction
 -----------------------------
 
-.. automodule:: ExtractMethod.elemental_property_ext
+.. automodule:: kratosbat.ExtractMethod.elemental_property_ext
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: ExtractMethod.get_all_trainingdata
+.. automodule:: kratosbat.ExtractMethod.get_all_trainingdata
    :members:
    :undoc-members:
    :show-inheritance:
@@ -20,7 +20,7 @@ Data Extraction
 Data Processing
 --------------------------
 
-.. automodule:: DataProcess.PCA
+.. automodule:: kratosbat.DataProcess.PCA
    :members:
    :undoc-members:
    :show-inheritance:
@@ -28,7 +28,7 @@ Data Processing
 Neural Network
 ----------------------------------
 
-.. automodule:: NN.nn
+.. automodule:: kratosbat.NN.nn
    :members:
    :undoc-members:
    :show-inheritance:
@@ -36,12 +36,12 @@ Neural Network
 Support Vector Regression
 --------------------------
 
-.. automodule:: SVR.cross_validation
+.. automodule:: kratosbat.SVR.cross_validation
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: SVR.svr_model
+.. automodule:: kratosbat.SVR.svr_model
    :members:
    :undoc-members:
    :show-inheritance:
