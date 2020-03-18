@@ -19,7 +19,7 @@ model by get average MSE, RSS, R^2
 
 
 def svr_data():
-    X1 = pd.read_csv('../Data/DataForSVR/GC_PVA.csv')
+    X1 = pd.read_csv('../Data/DataForSVR/GC_PCA.csv')
     y1 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Gravimetric Capacity (units)']]
     X2 = pd.read_csv('../Data/DataForSVR/VC_PCA.csv')
     y2 = pd.read_csv('../Data/NEWTrainingData_StandardScaler.csv').loc[:, ['Volumetric Capacity']]
