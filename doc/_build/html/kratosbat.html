@@ -81,9 +81,8 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="module.html">predict_tool</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">kratosbat Predictor Tool Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-predict_tools">Module contents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="module.html">predict_tool</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">kratosbat Predictor Tool Package</a></li>
 </ul>
 </li>
 </ul>
@@ -130,6 +129,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="module.html">predict_tool</a> &raquo;</li>
         
       <li>kratosbat Predictor Tool Package</li>
     
@@ -186,43 +187,6 @@ neural network to return gravimetric and volumetric capacity</p>
 <dd><p>Takes dataframe and returns the volume change of the    electrode. Parameters are the dataframe,    the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints.</p>
 </dd></dl>
 
-<div class="section" id="module-predict_tools">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-predict_tools" title="Permalink to this headline">¶</a></h2>
-<p>This module contains all functions required by the user to predict the
-volumetric and gravimetric capacity of an electrode material.</p>
-<dl class="function">
-<dt>
-<code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">convert</code><span class="sig-paren">(</span><em class="sig-param">y_param</em><span class="sig-paren">)</span></dt>
-<dd><p>Function to convert from scaled data to normal data
-This function takes the output of the model and will return the actual
-property quantities.</p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">generate_model_df</code><span class="sig-paren">(</span><em class="sig-param">ion</em>, <em class="sig-param">crystal_system</em>, <em class="sig-param">spacegroup</em>, <em class="sig-param">charge</em>, <em class="sig-param">discharge</em><span class="sig-paren">)</span></dt>
-<dd><p>Generates dataframe to input into the neural network model.
-The dataframe must contain the working ion, crystal system,
-spacegroup number, charge formula, and discharge formula</p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">nn_capacity</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">size_h</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">number_samples</em><span class="sig-paren">)</span></dt>
-<dd><p>Takes a dataframe, the number of inputs, the number of nodes
-for the first hidden layer, the number of nodes for the second
-hidden layer, the number of outputs, and the total number of
-datapoints as the input parameters and returns a trained
-neural network to return gravimetric and volumetric capacity</p>
-</dd></dl>
-
-<dl class="function">
-<dt>
-<code class="sig-prename descclassname">predict_tools.</code><code class="sig-name descname">nn_volume</code><span class="sig-paren">(</span><em class="sig-param">dataframe</em>, <em class="sig-param">d_in</em>, <em class="sig-param">H</em>, <em class="sig-param">h_2</em>, <em class="sig-param">d_out</em>, <em class="sig-param">N</em><span class="sig-paren">)</span></dt>
-<dd><p>Takes dataframe and returns the volume change of the    electrode. Parameters are the dataframe,    the number of inputs, the number of nodes    for the first hidden layer, the number of nodes for the second    hidden layer, the number of outputs, and the total number of    datapoints.</p>
-</dd></dl>
-
-</div>
 </div>
 
 
