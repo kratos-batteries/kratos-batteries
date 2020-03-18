@@ -133,6 +133,17 @@ README.md
 environment.yml
 setup.py
 ```
+
+## Data Extract & Process
+In Kratos battery, Our training data were extracted from the Material Project database containing a total of 4400 data for intercalation-based electrode materials. 23,24 We utilized the Material Project?s application programming interface pymatgen to access the data from the database.  Although DFT predictions are not the gold standard for theoretical calculations in some contexts, 28 they do provide reasonable insights and can be used to guide experimental research.
+
+The features used to specify a particular electrode material in our ML models include the working ion in the battery (i.e., Li or other metals), the concentration of the active metal ion in a given compound, crystal lattice types, and space group numbers. All other features were obtained from the elemental properties of the atomic constituents involved in a particular electrode. The elemental properties added to the feature vectors are adopted from the project called Magpie of Ward et al.
+
+Finally, as Data processing, sklearn.feature_selection.RFE and sklearn.decomposition.PCA were applied to select and extract features, which can decrese dimensionality of training data from 241 to 135.
+
+
+
+
 ## Neural Network - PyTorch
 Using Pytorch, a neural network  was created to predict gravimetric capacity, volumetric capacity, and max volume change for battery electrodes. The network was created through a sequential model, with two hidden layers. The model was then put through 1000 epochs to reduce mean squared error before a final model was produced to predict the desired properties.
 
@@ -143,7 +154,8 @@ Using Pytorch, a neural network  was created to predict gravimetric capacity, vo
 This loss function and schematic of this NN is shown above for user validation.
 
 ## Support Vector Machine - Regression (SVR)
-SVR was used as a supervised learning model to analyze the data for regression analysis. 
+We compared the performance of NN with another machine-learning model, SVM. When used for a regression
+problem, SVM is known as a support vector regression (SVR). SVR is a kernel-based regression technique known for its robust performance in complex data representations. It works by mapping nonlinearly separable data in real space to higher dimensional space via a kernel function. We have used the radial basis function (RBF) kernel for this work. In addition, SVR depends on two important parameters (C and ?) that control the quality of the result. These parameters were tuned by using the grid search algorithm of sklearn. We varied C and ? logarithmically in between each $10{?5}$ and $10{5}$ . For each of the possible combinations of C and ?, SVR computations were performed using 10-fold cross-validation to calculate the MSE.
 
 <p align="center">
 <img align="middle" src="images/All_SVR.png" width="600"> 
