@@ -135,7 +135,7 @@ def transts(data):
     PCA1 = PCA(n_components=165)
     PCA1.fit(PSS)
     
-    NEW_DATA1=PCA1.transform(SS.transform(NPROP))
+    NEW_DATA1=PCA1.transform(SS.transform(NPROP[0].reshape(1,-1)))
     return NEW_DATA1
 
 def tranmms(data):
@@ -184,5 +184,5 @@ def tranmms(data):
     PCA2 = PCA(n_components=115)
     PCA2.fit(PMS)
     
-    NEW_DATA2=PCA2.transform(MS.transform(NPROP))
+    NEW_DATA2=PCA2.transform(MS.transform(NPROP[0].reshape(1,-1)))
     return NEW_DATA2
