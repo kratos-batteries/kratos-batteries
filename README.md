@@ -18,78 +18,13 @@ Notebooks are provided in the `Examples` directory. You will require a `jupyter 
 ## Organization of Repository
 ```
 Examples/
-  BatteryData.csv
-  CrystalSystemsTable.csv
-  NewTraingingData_MinMaxScalar.csv
-  NewTraingingData_StandardScalar.csv
-  README.md
-  data_extract.py
-  example_runtrhough.ipynb
-  feature_process_SVR.ipynb
-  generate_inputs.py
-  Integrating PCA.ipynb
-  magpie.py
-  nn.py
-  PCA.ipynb
-  SecondPassNN.ipynb
-  svr_script.ipynb
-  Userdata.ipynb
 doc/
   Design/
-    Flow-Charts.pdf
-    usecases.md
   _build/
-    doctrees/
-      environment.pickle
-      index.doctree
-    html/
-      _sources/
-        index.rst.txt
-      _static/
-        alabaster.css
-        basic.css
-        custom.css
-        doctools.js
-        documentation_options.js
-        file.png
-        jquery-3.4.1.js
-        jquery.js
-        language_data.js
-        minus.png
-        plus.png
-        pygments.css
-        searchtools.js
-        underscore-1.3.1.js
-        underscore.js
-      .buildinfo
-      genindex.html
-      index.html
-      objects.inv
-      py-modindex.html
-      search.html
-      searchindex.js
-  Makefile
-  conf.py
-  index.rst
-  make.bat
 images/
-  All_NN.png
-  All_SVR.png
-  NN_lossfunction.png
-  NeuralNetworkFlow.png
-  SVR_CV.png
-  SVR_GC.png
-  SVR.MDV.png
-  logo.png
 kratosbat/
   Data/
     DataForSVR/
-      GC_PCA.csv
-      GC_data.csv
-      MDV_PCA.csv
-      MDV_data.csv
-      VC_PCA.csv
-      VC_data.csv
     BatteryData.csv
     CrystalSystemsTable.csv
     ElementalProperty.csv
@@ -118,13 +53,6 @@ kratosbat/
   ThirdPartyResource/
     magpie.py
   tests/
-    README.md
-    test_cross_validation
-    test_nn.py
-    test_svr_model.py
-    test_variable_selection_extraction
-  __init__.py
-  __main__.py
   predict_tools.py
 paper/
   Elemental Properties.pdf
