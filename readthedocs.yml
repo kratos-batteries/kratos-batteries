@@ -21,3 +21,10 @@ python:
   version: 3.7
   install:
     - environments: environment.yml
+    - method: conda
+      path:
+      extra_requirements: 
+	  -doc
+    - method: setuptools
+      path: another/package
+  system_packages: true
