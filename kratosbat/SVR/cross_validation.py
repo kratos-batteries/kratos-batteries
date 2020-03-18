@@ -34,12 +34,13 @@ def GC_kernal_select(X1, y1):
     kernal = ['poly', 'rbf', 'sigmoid']
     mse = []
     for item in kernal:
+        svr = SVR(kernel=item, degree=3, gamma='scale', coef0=0.0, tol=0.001, C=1.0, epsilon=0.1, \
+                  shrinking=True, cache_size=200, verbose=False, max_iter=-1)
         for train_index, test_index in kf.split(X1, y1):
             X1_train, X1_test = X1.iloc[train_index], X1.iloc[test_index]
             y1_train, y1_test = y1.iloc[train_index], y1.iloc[test_index]
             svr.fit(X1_train, y1_train.values.ravel())
             y1_pred = svr.predict(X1_test)
-
             mse.append(pd.Series(mean_squared_error(y1_test, y1_pred)).mean())
     print(mse)
     return mse
@@ -85,7 +86,7 @@ def VC_kernal_select(X3, y3):
 
 # this function is working on test and evaluate the performance of our estabilshed model
 # get from svr-model.py
-def SVR_model_validation(X1, y1, X2, y2, X3, y3, X4, y4):
+def SVR_model_validation(X1, y1, X2, y2, X3, y3):
     svr_cg = joblib.load('svr_GC.pkl')
     svr_cv = joblib.load('svr_CV.pkl')
     svr_mdv = joblib.load('svr_MDV.pkl')
