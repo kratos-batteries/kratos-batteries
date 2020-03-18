@@ -132,4 +132,4 @@ def SVR_model_validation(X1, y1, X2, y2, X3, y3):
         list_R23.append(r2_score(y3_test,y3_pred))
     print(pd.Series(list_mse3).mean())
     print(pd.Series(list_R23).mean())
-    return
+    return list_R21, list_R22, list_R23, list_mse1, list_mse2, list_mse3
