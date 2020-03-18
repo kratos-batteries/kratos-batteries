@@ -35,7 +35,7 @@ def GC_svr_model(X1, y1):
     print(r2_score(y1_test, y1_pred))
     return
 
-def VC_svr_model(X2,y2):
+def VC_svr_model(X2, y2):
     X2_train, X2_test, y2_train, y2_test =train_test_split(X2, y2, test_size=0.2, random_state=123)
     svr = SVR(kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, C=8.0, epsilon=0.1, \
               shrinking=True, cache_size=200, verbose=False, max_iter=-1)
