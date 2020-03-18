@@ -8,10 +8,7 @@ data and exports a csv where each row is a different battery material.
 import os
 import pandas as pd
 from pymatgen import MPRester
-import sys
-sys.path.append("../ThirdPartyResource/")
-import magpie
-from magpie import MagpieServer
+from kratosbat.ThirdPartyResource.magpie import MagpieServer
 
 
 def get_bat_dat(mapi_key):
@@ -154,15 +151,15 @@ def get_element_property(clean_battery_df=None):
     of Inorganic Materials. npj Comput. Mater. 2016, 2, No. 16028.
     """
 
-    m = MagpieServer()
+    m_serv = MagpieServer()
     if clean_battery_df is None:
         if os.path.exists('../Data/BatteryData.csv'):
             clean_battery_df = pd.read_csv('../Data/BatteryData.csv')
     # getting Mean and Deviation of Element Property for Charge_Formula
     charge_formula = clean_battery_df['Charge Formula']
-    df_mean_charge = m.generate_attributes("oqmd-Eg", charge_formula).\
+    df_mean_charge = m_serv.generate_attributes("oqmd-Eg", charge_formula).\
         iloc[:, 6:-7:6]
-    df_dev_charge = m.generate_attributes("oqmd-Eg", charge_formula).\
+    df_dev_charge = m_serv.generate_attributes("oqmd-Eg", charge_formula).\
         iloc[:, 8:-7:6]
     df_mean_charge.rename(
         columns={'mean_Nuber': 'Char_mean_Number',
@@ -213,10 +210,10 @@ def get_element_property(clean_battery_df=None):
 
     # getting Mean and Deviation of Element Property for Discharge_Formula
     discharge_formula = clean_battery_df['Discharge Formula']
-    df_mean_discharge = m.generate_attributes("oqmd-Eg", discharge_formula)\
-        .iloc[:, 6:-7:6]
-    df_dev_discharge = m.generate_attributes("oqmd-Eg", discharge_formula)\
-        .iloc[:, 8:-7:6]
+    df_mean_discharge = m_serv.generate_attributes(
+        "oqmd-Eg", discharge_formula).iloc[:, 6:-7:6]
+    df_dev_discharge = m_serv.generate_attributes(
+        "oqmd-Eg", discharge_formula).iloc[:, 8:-7:6]
     df_mean_discharge.rename(
         columns={'mean_Nuber': 'Dis_mean_Number',
                  'mean_MendeleevNumber': 'Dis_mean_MendeleevNumber',
