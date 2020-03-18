@@ -25,16 +25,6 @@ Data Processing
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: DataProcess.magpie
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-.. automodule:: DataProcess.variable_selection_extraction
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 Neural Network
 ----------------------------------
 
