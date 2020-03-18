@@ -135,6 +135,9 @@ setup.py
 ```
 ## Neural Network - PyTorch
 The neural network created to predict gravimetric capacity, volumetric capacity, and max volume change for battery electrodes was created using PyTorch. The network was created through a sequential model, with two hidden layers. The model was then put through 1000 epochs to reduce mean squared error before a final model was produced to predict the quantities of interest.
+
+<img align="right" src="images/NN_lossfunction.png" width="150">
+<img align="left" src="images/NeuralNetworkFlow.png" width="150">
 ## Usage
 
 
