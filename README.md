@@ -21,6 +21,7 @@ Examples/
 doc/
   Design/
   _build/
+  presentations/
 images/
 kratosbat/
   Data/
